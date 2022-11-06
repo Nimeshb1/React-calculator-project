@@ -1,25 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import { ButtonsAreas } from "./components/ButtonsAreas";
 
+import { Display } from "./components/Display";
+
+const operators = ["%", "/", "-", "+", "*"];
 function App() {
+  let [str, strdisplay] = useState("");
+  const [setlastope, stroper] = useState("");
+
+  const handelOnClick = (val) => {
+    strdisplay(str + val);
+
+    if (val === "AC") {
+      strdisplay("");
+      return;
+    }
+
+    if (val === "C") {
+      const lastdel = str[str.length - 1];
+      strdisplay(lastdel);
+      return;
+    }
+
+    if (val === "=") {
+      let lastcar = str[str.length - 1];
+      let dislay = str;
+
+      if (operators.includes(lastcar)) {
+        dislay = str.slice(0, -1);
+      }
+
+      strdisplay(eval(dislay).toString());
+      return;
+    }
+
+    if (operators.includes(val)) {
+      stroper(val);
+      if (!str) {
+        return;
+      }
+      const lastChar = str[str.length - 1];
+      console.log(lastChar);
+      let temStr = str;
+      if (operators.includes(lastChar)) {
+        temStr = str.slice(0, -1);
+      }
+      strdisplay(temStr + val);
+      return;
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <div className="botton">
+        <ButtonsAreas handelOnClick={handelOnClick} />
+        <Display str={str} />
+      </div>
     </div>
   );
 }
-
 export default App;

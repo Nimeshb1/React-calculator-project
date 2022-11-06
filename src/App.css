@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.botton {
+  background: linear-gradient(
+    134.9deg,
+    #84b038 -9.72%,
+
+    rgba(10, 62, 16, 0.71) 47.92%,
+
+    rgba(46, 87, 48, 0.796) 101.18%
+  );
+  padding: 10px;
+  display: grid;
+  backdrop-filter: blur(5px);
+  min-height: 90vh;
+  width: 400px;
+  display: grid;
+  border-radius: 2rem;
+  box-shadow: 8px 12px 4px rgba(0, 0, 0, 0.25);
+  grid-template-areas:
+    "scraeen scraeen scraeen scraeen"
+    "one two three four"
+    "five six seven eight"
+    "nine ten eleven twelve"
+    "thirten fourteen fifteen sixten"
+    "seventen seventen eighten ninetin";
+}
+.botton {
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.screen {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-area: scraeen;
+  width: 98%;
+  height: 60px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 8px 5px 4px 2px rgba(0, 0, 0, 0.1);
+}
+button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 3.3rem;
+  cursor: pointer;
+  box-shadow: 9px 3px 4px 5px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(180deg, #82b67d 0%, rgba(217, 217, 217, 0) 100%);
+}
+
+.screen label {
+  margin-right: 20px;
+}
+.screen {
+  grid-area: scraeen;
+}
+.bote-1 {
+  grid-area: one;
+}
+
+.bote-2 {
+  grid-area: two;
+}
+
+.bote-3 {
+  grid-area: three;
+}
+
+.bote-4 {
+  grid-area: four;
+}
+.bote-5 {
+  grid-area: five;
+}
+.bote-6 {
+  grid-area: six;
+}
+.bote-7 {
+  grid-area: seven;
+}
+.bote-8 {
+  grid-area: eight;
+}
+.bote-9 {
+  grid-area: nine;
+}
+.bote-10 {
+  grid-area: ten;
+}
+.bote-11 {
+  grid-area: eleven;
+}
+.bote-12 {
+  grid-area: twelve;
+}
+.bote-13 {
+  grid-area: thirten;
+}
+.bote-14 {
+  grid-area: fourteen;
+}
+.bote-15 {
+  grid-area: fifteen;
+}
+.bote-16 {
+  grid-area: sixten;
+}
+.bote-17 {
+  width: 11.2rem;
+  grid-area: seventen;
+}
+.bote-18 {
+  grid-area: eighten;
+}
+.bote-19 {
+  grid-area: ninetin;
+}
+.circle {
+  border: 1px solid red;
+  height: 10rem;
+  width: 14rem;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+  right: 20px;
+  z-index: -9;
 }
