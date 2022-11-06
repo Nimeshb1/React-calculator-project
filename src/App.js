@@ -51,13 +51,15 @@ function App() {
     }
   };
   return (
-    <div className="wrapper">
-      <div className="botton">
-        <h1>Mero BBY Rojina Bista</h1>
-        <ButtonsAreas handelOnClick={handelOnClick} />
-        <Display str={str} />
+    <>
+      <h1 className="text-center">Mero BBY Rojina Bista</h1>
+      <div className="wrapper">
+        <div className="botton">
+          <ButtonsAreas handelOnClick={handelOnClick} />
+          <Display str={str} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 export default App;
