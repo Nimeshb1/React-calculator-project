@@ -53,6 +53,7 @@ function App() {
   return (
     <div className="wrapper">
       <div className="botton">
+        <h1>Mero BBY Rojina Bista</h1>
         <ButtonsAreas handelOnClick={handelOnClick} />
         <Display str={str} />
       </div>
